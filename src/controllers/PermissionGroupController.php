@@ -49,10 +49,7 @@ class PermissionGroupController extends Controller
      */
     public function store(CreatePermissionGroup $request)
     {
-        $group = new PermissionGroup;
-		$group->name = $request->name;
-		$group->code = $request->code;
-		$group->save();
+        $group = PermissionGroup::create($request->validated());
 
 		return redirect(url("permission/group"))->with('dp_announce', trans('deeppermission.alert.group.created'));
     }
@@ -90,9 +87,7 @@ class PermissionGroupController extends Controller
     public function update(CreatePermissionGroup $request, $id)
     {
         $group = PermissionGroup::findOrFail($id);
-		$group->name = $request->name;
-		$group->code = $request->code;
-		$group->save();
+		$group->update($request->validated());
 
 		return redirect(url("permission/group"))->with('dp_announce', trans('deeppermission.alert.group.updated'));
     }

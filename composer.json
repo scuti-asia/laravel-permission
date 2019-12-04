@@ -4,7 +4,6 @@
     "type": "library",
     "require": {
         "maatwebsite/excel": "*",
-        "alsofronie/eloquent-uuid": "*"
     },
     "license": "MIT",
     "authors": [

@@ -51,10 +51,7 @@ class RoleController extends Controller
 	        'name' => 'required|unique:roles',
 	        'code' => 'required|unique:roles',
 	    ));
-        $role = new Role;
-		$role->name = $request->name;
-		$role->code = $request->code;
-		$role->save();
+        $role = Role::create($request->validated());
 
 		return redirect(url("role"))->with('dp_announce', trans('deeppermission.alert.role.created'));
     }
@@ -92,9 +89,7 @@ class RoleController extends Controller
     public function update(CreateRole $request, $id)
     {
         $role = Role::findOrFail($id);
-		$role->name = $request->name;
-		$role->code = $request->code;
-		$role->save();
+		$role->update($request->validated());
 
 		return redirect(url("role"))->with('dp_announce', trans('deeppermission.alert.role.updated'));
     }
