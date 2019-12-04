@@ -58,8 +58,6 @@ SCUTI_DP_ADMIN_ID=1
 
 ```
 
-### Step 6: (for LBSA only) Move example/app.blade.php to views root folder and include libressltd.deeppermission.sidebar view
-
 ### Supported function
 
 ```php
