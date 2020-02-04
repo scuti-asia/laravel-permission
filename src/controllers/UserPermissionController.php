@@ -1,6 +1,6 @@
 <?php
 
-namespace Scuti\DeepPermission\Controllers;
+namespace Scuti\Permission\Controllers;
 
 use App\Models\PermissionGroup;
 use Illuminate\Http\Request;
@@ -8,7 +8,7 @@ use App\Http\Controllers\Controller;
 
 use App\Http\Requests;
 use App\Models\User;
-use Scuti\DeepPermission\Repositories\Repository;
+use Scuti\Permission\Repositories\Repository;
 
 class UserPermissionController extends Controller
 {
@@ -31,7 +31,7 @@ class UserPermissionController extends Controller
         $permissionGroup = $this->permissionGroup->all();
 
 		return view(
-		    "scuti.deeppermission.user.permission.index",
+		    "scuti.permission.user.permission.index",
             compact('user', 'permissionGroup')
         );
     }

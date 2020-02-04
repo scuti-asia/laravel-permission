@@ -1,12 +1,12 @@
 <?php
 
-namespace Scuti\DeepPermission\Controllers;
+namespace Scuti\Permission\Controllers;
 
 use App\Http\Controllers\Controller;
-use Scuti\DeepPermission\Repositories\Repository;
+use Scuti\Permission\Repositories\Repository;
 use App\Http\Requests;
 use App\Models\PermissionGroup;
-use App\Http\Requests\DeepPermission\CreatePermissionGroup;
+use App\Http\Requests\Permission\CreatePermissionGroup;
 
 class PermissionGroupController extends Controller
 {
@@ -24,14 +24,14 @@ class PermissionGroupController extends Controller
         $permissionGroup = $this->model->paginate();
 
         return response()->view(
-            "scuti.deeppermission.permission_group.index",
+            "scuti.permission.permission_group.index",
             compact('permissionGroup')
         );
     }
 
     public function create()
     {
-        return response()->view("scuti.deeppermission.permission_group.add");
+        return response()->view("scuti.permission.permission_group.add");
     }
 
     public function store(CreatePermissionGroup $request)
@@ -53,7 +53,7 @@ class PermissionGroupController extends Controller
 
         return response()
             ->view(
-                "scuti.deeppermission.permission_group.add",
+                "scuti.permission.permission_group.add",
                 compact('group')
             );
     }

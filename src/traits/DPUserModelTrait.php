@@ -1,6 +1,6 @@
 <?php
 
-namespace Scuti\DeepPermission\Traits;
+namespace Scuti\Permission\Traits;
 
 use Auth;
 use App\Models\Permission;

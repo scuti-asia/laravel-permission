@@ -1,6 +1,6 @@
 <?php
 
-namespace Scuti\DeepPermission\Repositories;
+namespace Scuti\Permission\Repositories;
 
 use Illuminate\Database\Eloquent\Model;
 

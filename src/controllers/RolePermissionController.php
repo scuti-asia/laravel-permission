@@ -1,13 +1,13 @@
 <?php
 
-namespace Scuti\DeepPermission\Controllers;
+namespace Scuti\Permission\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 use App\Models\Role;
 use App\Models\PermissionGroup;
-use Scuti\DeepPermission\Repositories\Repository;
+use Scuti\Permission\Repositories\Repository;
 
 class RolePermissionController extends Controller
 {
@@ -30,7 +30,7 @@ class RolePermissionController extends Controller
         $permissionGroup = $this->model->paginate();
 
         return view(
-            "scuti.deeppermission.role.permission.index",
+            "scuti.permission.role.permission.index",
             compact(
                 'role',
                 'permissionGroup'

@@ -1,13 +1,13 @@
 <?php
 
-namespace Scuti\DeepPermission\Controllers;
+namespace Scuti\Permission\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests;
 use App\Models\Role;
 use App\Models\User;
-use Scuti\DeepPermission\Repositories\Repository;
+use Scuti\Permission\Repositories\Repository;
 
 class UserRoleController extends Controller
 {
@@ -30,7 +30,7 @@ class UserRoleController extends Controller
         $users = $this->user->paginate();
 
         return view(
-            "scuti.deeppermission.user_role.index",
+            "scuti.permission.user_role.index",
             compact('roles', 'users')
         );
     }

@@ -1,15 +1,15 @@
-# DeepPermission
+# Permission
 
-### Step 1: Install DeepPermission
+### Step 1: Install Permission
 
-composer require scuti/deeppermission
+composer require scuti/permission
 
 ### Step 2: Add service provider to config/app.php
 
 ```php
 //Provider
 
-Scuti\DeepPermission\DeepPermissionServiceProvider::class, 
+Scuti\Permission\PermissionServiceProvider::class, 
 Maatwebsite\Excel\ExcelServiceProvider::class,
 Collective\Html\HtmlServiceProvider::class,
 
@@ -23,7 +23,7 @@ Collective\Html\HtmlServiceProvider::class,
 
 ### Step 3: Publish vendor
 
-php artisan vendor:publish --tag=deeppermission --force
+php artisan vendor:publish --tag=permission --force
 
 php artisan migrate
 
@@ -31,7 +31,7 @@ php artisan migrate
 ```php
 
 
-use Scuti\DeepPermission\Traits\DPUserModelTrait;
+use Scuti\Permission\Traits\DPUserModelTrait;
 
 class User extends Authenticatable
 {

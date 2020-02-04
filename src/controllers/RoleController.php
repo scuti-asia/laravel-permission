@@ -1,12 +1,12 @@
 <?php
 
-namespace Scuti\DeepPermission\Controllers;
+namespace Scuti\Permission\Controllers;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Role;
-use App\Http\Requests\DeepPermission\CreateRole;
-use Scuti\DeepPermission\Repositories\Repository;
+use App\Http\Requests\Permission\CreateRole;
+use Scuti\Permission\Repositories\Repository;
 
 class RoleController extends Controller
 {
@@ -24,14 +24,14 @@ class RoleController extends Controller
         $roles = $this->model->paginate();
 
         return response()->view(
-            "scuti.deeppermission.role.index",
+            "scuti.permission.role.index",
             compact('roles')
         );
     }
 
     public function create()
     {
-        return response()->view("scuti.deeppermission.role.add");
+        return response()->view("scuti.permission.role.add");
     }
 
     public function store(CreateRole $request)
@@ -52,7 +52,7 @@ class RoleController extends Controller
     	$role = $this->model->show($id);
 
         return response()->view(
-        "scuti.deeppermission.role.add",
+        "scuti.permission.role.add",
             compact('role')
         );
     }

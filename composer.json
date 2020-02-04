@@ -1,5 +1,5 @@
 {
-    "name": "scuti/deeppermission",
+    "name": "scuti/permission",
     "description": "permission & role",
     "type": "library",
     "require": {
@@ -15,7 +15,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Scuti\\DeepPermission\\": "src/"
+            "Scuti\\Permission\\": "src/"
         },
         "classmap": [
             "src/controllers",
