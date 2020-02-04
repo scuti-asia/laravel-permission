@@ -1,0 +1,26 @@
+{
+    "name": "scuti/deeppermission",
+    "description": "permission & role",
+    "type": "library",
+    "require": {
+        "maatwebsite/excel": "*",
+        "laravelcollective/html": "*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "scuti",
+            "email": "scuti@scuti.asia"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Scuti\\DeepPermission\\": "src/"
+        },
+        "classmap": [
+            "src/controllers",
+            "src/traits"
+        ]
+    },
+    "minimum-stability": "stable"
+}
